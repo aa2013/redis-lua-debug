@@ -1,11 +1,6 @@
-﻿local redis = require('redis')
+local redis = require('redis')
+local cjson = require('cjson')
 
---local params = {
---    host = '127.0.0.1',
---    port = 6378,
---    password = 'redis!2#',
---    db = 0,
---}
 local client
 local redis_env = {}
 function redis_env.connect(params)
@@ -55,7 +50,8 @@ local function createSandbox(keys, argv)
         string = string,
         table = table,
         math = math,
-        unpack = unpack or table.unpack
+        unpack = unpack or table.unpack,
+        cjson = cjson
     }
 
     local env = setmetatable(scope, {

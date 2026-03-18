@@ -6,7 +6,7 @@ local redis_env = {}
 function redis_env.connect(params)
     client = redis.connect(params)
     if params.password then
-        client:auth('redis!2#')
+        client:auth(params.password)
     end
     client:select(params.db)
 end

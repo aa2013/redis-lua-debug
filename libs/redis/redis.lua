@@ -995,7 +995,7 @@ end
 redis.commands = {
     -- commands operating on the key space
     exists           = command('EXISTS', {
-        -- response = toboolean
+        -- response = toboolean 
     }),
     del              = command('DEL'),
     type             = command('TYPE'),

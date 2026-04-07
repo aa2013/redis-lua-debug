@@ -1,4 +1,4 @@
-﻿local redis = {
+local redis = {
     _VERSION     = 'luaredis 2.1.0.0',
     _DESCRIPTION = 'A Lua client library for the redis key value storage system.',
     _COPYRIGHT   = 'Copyright (C) 2023',
@@ -995,7 +995,7 @@ end
 redis.commands = {
     -- commands operating on the key space
     exists           = command('EXISTS', {
-        response = toboolean
+        -- response = toboolean
     }),
     del              = command('DEL'),
     type             = command('TYPE'),

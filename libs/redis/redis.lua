@@ -995,7 +995,7 @@ end
 redis.commands = {
     -- commands operating on the key space
     exists           = command('EXISTS', {
-        -- response = toboolean 
+        -- response = toboolean
     }),
     del              = command('DEL'),
     type             = command('TYPE'),
@@ -1170,6 +1170,15 @@ redis.commands = {
         response = toboolean
     }),
     hsetnx           = command('HSETNX', {      -- >= 2.0
+        response = toboolean
+    }),
+    hsetex           = command('HSETEX', {      -- >= 2.0
+        response = toboolean
+    }),
+    hexpireat        = command('HEXPIREAT', {      -- >= 2.0
+        response = toboolean
+    }),
+    hexpire          = command('HEXPIRE', {      -- >= 2.0
         response = toboolean
     }),
     hmset            = command('HMSET', {       -- >= 2.0
